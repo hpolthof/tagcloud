@@ -121,14 +121,14 @@ class Tagcloud extends Facade
 	 *
 	 * @return array $this->tagsArray
 	 */
-	public function addTag($tagAttributes = array())
+	public function addTag($tagAttributes = array(), $size=1)
 	{
 		if (is_string($tagAttributes)) {
 			$tagAttributes = array('tag' => $tagAttributes);
 		}
 		$tagAttributes['tag'] = $this->formatTag($tagAttributes['tag']);
 		if (!array_key_exists('size', $tagAttributes)) {
-			$tagAttributes = array_merge($tagAttributes, array('size' => 1));
+			$tagAttributes = array_merge($tagAttributes, array('size' => $size));
 		}
 		if (!array_key_exists('tag', $tagAttributes)) {
 			return false;
