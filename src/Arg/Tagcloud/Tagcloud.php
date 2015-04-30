@@ -111,7 +111,7 @@ class Tagcloud extends Facade
 		if ($this->_formatting['trim']) {
 			$string = trim($string);
 		}
-		return preg_replace('/[^\w ]/u', '', strip_tags($string));
+		return strip_tags($string);
 	}
 
 	/*
