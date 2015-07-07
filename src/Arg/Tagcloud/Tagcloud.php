@@ -111,6 +111,12 @@ class Tagcloud extends Facade
 		if ($this->_formatting['trim']) {
 			$string = trim($string);
 		}
+		
+		// Remove trailing .,:;
+		if (preg_match('/^(.*?)(?:[.,:;])?$/m', $string, $match)) {
+			$string = $match[1];
+		}
+		
 		return strip_tags($string);
 	}
 
