@@ -7,6 +7,12 @@ Implementation of http://lotsofcode.github.io/tag-cloud/
 # PHP Tag Cloud
 ## v4.0
 
+#### Installation
+Use composer
+```
+composer require hpolthof/tagcloud
+```
+
 #### Basic usage
 
 	$cloud = new TagCloud();
